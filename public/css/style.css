@@ -54,7 +54,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-width: 315px;
+    width: 350px;
   }
 
   .teamnames {
@@ -65,6 +65,7 @@
     min-width: 60%;
     flex:1;
     padding: 8px;
+    max-width: 220px;
   }
 
   .scorestats {
