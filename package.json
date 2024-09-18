@@ -4,7 +4,6 @@
   "description": "the backend for scorescarp built by jerry innode js",
   "main": "index.js",
   "scripts": {
-    "build": "echo \"Error: no build specified\" && exit 1",
     "start":"node index.js",
     "dev":"node index.js"
   },
