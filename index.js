@@ -2,33 +2,17 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const express = require('express');
 const cors = require('cors');
+
+const path = require('path');
 const app = express();
 app.use(express.json());
 app.use(cors());
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
-    res.send(`
-        <html>
-        <head>
-        <title>ScoreScrap API</title>
-        </head>
-        <h1>Welcome, Scorescrap API</h1>
-        <h1>No specific day provided.</h1>
-        <br/> 
-        <p>Please provide a day in the URL.</p>
-        <ul>
-        <li>For today's matches: <a href="/today">/today</a></li>
-        <li>For tomorrow's matches: <a href="/tomorrow">/tomorrow</a></li>
-        <li>For yesterday's matches: <a href="/yesterday">/yesterday</a></li
-        </ul>
-        <blockquote>Example: <a href="/today">https://scorescrap.vercel.app/today</a></blockquote>
-        <i>Developed by Jerry <a href="https://github.com/JeremiahJacob261">GITHUB 🔥</a></i>
-        
-        </html>
-        `);
+    res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 app.get('/:day',async (req, res) => {

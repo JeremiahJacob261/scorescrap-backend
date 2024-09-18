@@ -1,0 +1,100 @@
+/* Step 1: Add @font-face to declare the TTF font */
+@font-face {
+    font-family: 'MyFont';
+    src: url('Mona-Sans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'BoldFont';
+    src: url('Mona-Sans-MediumNarrow.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  /* Step 2: Apply the font globally or to specific elements */
+  body {
+    font-family: 'MyFont', sans-serif;
+  }
+  
+  .logo {
+    width:100px;
+    height:100px;
+    padding: 8px;
+  }
+
+  .heads {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'MyFont', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .rowsofdata {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .rowsofdata-x{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rowsofdata-y{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 315px;
+  }
+
+  .teamnames {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    min-width: 60%;
+    flex:1;
+    padding: 8px;
+  }
+
+  .scorestats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 10%;
+    padding: 4px;
+  }
+
+  .scoreme {
+    font-family: 'BoldFont', sans-serif;
+    color:#C7C7C7;
+    font-size: 28px;
+    min-width: 70px;
+    padding: 6px;
+    text-align: center;
+  }
+
+  .fab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50px;
+    height: 50px;
+    border-radius: 25%;
+    padding: 4px;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+  }
